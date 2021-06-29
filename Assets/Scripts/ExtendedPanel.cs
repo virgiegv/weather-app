@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ExtendedPanel : MonoBehaviour
 {
     public int activeDay;
+
     private GameObject weatherIllustration;
 
     public GameObject sunnyIllustration;
@@ -28,19 +29,19 @@ public class ExtendedPanel : MonoBehaviour
 
         activeDay = day;
 
-        if (precipitation >= 0 && precipitation < 40)
+        if (precipitation < 40)
         {
             weatherIllustration = Instantiate(sunnyIllustration, this.transform);
         }
-        if (precipitation >= 40 && precipitation < 100)
+        else if (precipitation >= 40 && precipitation < 100)
         {
             weatherIllustration = Instantiate(cloudyIllustration, this.transform);
         }
-        if (precipitation >= 100 && precipitation < 150)
+        else if (precipitation >= 100 && precipitation < 150)
         {
             weatherIllustration = Instantiate(rainyIllustration, this.transform);
         }
-        if (precipitation >= 150)
+        else if (precipitation >= 150)
         {
             weatherIllustration = Instantiate(stormyIllustraton, this.transform);
         }

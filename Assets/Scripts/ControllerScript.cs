@@ -1,30 +1,23 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
 public class ControllerScript : MonoBehaviour
 {
     public RainRequest rainRequest;
     
     public GameObject panelPrefab;
     public GameObject panelOrigin;
-
-    public Days[] daysArray;
-
+    public GameObject middleCurtain;
+    public GameObject extendedPanel;
+    public GameObject leftArrow;
+    public GameObject rightArrow;
+    public GameObject pageTitle;
+    
+    private Days[] daysArray;
     private List<RainData> rainDataList;
 
     private const float panelSize = 100.0f;
     private const float panelYPosition = -60.0f;
-
-    public GameObject middleCurtain;
-    public GameObject extendedPanel;
-
-    public GameObject leftArrow;
-    public GameObject rightArrow;
-
-    public GameObject pageTitle;
 
     void Start()
     {
